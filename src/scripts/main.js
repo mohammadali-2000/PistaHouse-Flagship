@@ -459,4 +459,61 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 19. Mobile Navigation Drawer Interaction
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  const mobileMenuToggleBtn = document.getElementById('mobileMenuToggleBtn');
+  const closeMobileNavBtn = document.getElementById('closeMobileNavBtn');
+  const mobileNavBackdrop = document.querySelector('.mobile-nav-backdrop');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileCurrencySelect = document.getElementById('mobileCurrencySelect');
+
+  function openMobileNav() {
+    if (mobileNavDrawer) {
+      mobileNavDrawer.classList.add('active');
+      mobileNavDrawer.setAttribute('aria-hidden', 'false');
+      mobileMenuToggleBtn?.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeMobileNav() {
+    if (mobileNavDrawer) {
+      mobileNavDrawer.classList.remove('active');
+      mobileNavDrawer.setAttribute('aria-hidden', 'true');
+      mobileMenuToggleBtn?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  }
+
+  mobileMenuToggleBtn?.addEventListener('click', () => {
+    if (mobileNavDrawer?.classList.contains('active')) {
+      closeMobileNav();
+    } else {
+      openMobileNav();
+    }
+  });
+
+  closeMobileNavBtn?.addEventListener('click', closeMobileNav);
+  mobileNavBackdrop?.addEventListener('click', closeMobileNav);
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      closeMobileNav();
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNavDrawer?.classList.contains('active')) {
+      closeMobileNav();
+    }
+  });
+
+  if (mobileCurrencySelect && currencySelect) {
+    mobileCurrencySelect.value = currencySelect.value;
+    mobileCurrencySelect.addEventListener('change', (e) => {
+      currencySelect.value = e.target.value;
+      currencySelect.dispatchEvent(new Event('change'));
+    });
+  }
 });

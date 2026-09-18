@@ -38,16 +38,18 @@
   <!-- Interactive Spice & Ambient Dust Canvas -->
   <canvas id="spiceCanvas"></canvas>
 
-  <!-- Ambient Glow Orbs -->
-  <div class="ambient-glow-orb ambient-orb-1"></div>
-  <div class="ambient-glow-orb ambient-orb-2"></div>
-  <div class="ambient-glow-orb ambient-orb-3"></div>
+  <!-- Ambient Glow Orbs (Strictly Clipped) -->
+  <div class="ambient-glow-wrapper" aria-hidden="true">
+    <div class="ambient-glow-orb ambient-orb-1"></div>
+    <div class="ambient-glow-orb ambient-orb-2"></div>
+    <div class="ambient-glow-orb ambient-orb-3"></div>
+  </div>
 
   <!-- Top Announcement Bar (Original Site Feature) -->
   <div class="announcement-bar">
-    <span>🚚 Shipping Available All Over India! Free Shipping on Orders Above ₹1,499</span>
-    <span style="opacity: 0.6;">|</span>
-    <span>✈️ Worldwide Air Cargo to USA, UAE & 40+ Countries</span>
+    <span class="announcement-item-1">🚚 Shipping All Over India! Free on Orders Above ₹1,499</span>
+    <span class="announcement-sep" style="opacity: 0.6;">|</span>
+    <span class="announcement-item-2">✈️ Worldwide Air Cargo to USA, UAE & 40+ Countries</span>
     <a href="#menu" class="announcement-link">Shop Delicacies →</a>
   </div>
 
@@ -67,15 +69,13 @@
 
     <nav>
       <ul class="nav-links">
-        <li><a href="#biryani" class="nav-link">Royal Biryani</a></li>
-        <li><a href="#haleem" class="nav-link">GI Haleem</a></li>
+        <li><a href="#biryani" class="nav-link">Biryani</a></li>
+        <li><a href="#haleem" class="nav-link">Haleem</a></li>
         <li><a href="#featured-roat" class="nav-link">Dum Ke Roat</a></li>
         <li><a href="#travel-pack" class="nav-link">Travel Packs</a></li>
         <li><a href="#menu" class="nav-link">Royal Menu</a></li>
-        <li><a href="#awards" class="nav-link">Awards</a></li>
-        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#awards" class="nav-link">Heritage</a></li>
         <li><a href="#franchise" class="nav-link">Franchise</a></li>
-        <li><a href="#faqs" class="nav-link">FAQs</a></li>
       </ul>
     </nav>
 
@@ -108,8 +108,90 @@
         <span>Tray</span>
         <span class="cart-count-badge">0</span>
       </button>
+
+      <!-- Mobile Menu Hamburger Button -->
+      <button id="mobileMenuToggleBtn" class="mobile-menu-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-backdrop"></div>
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="brand-logo-wrap">
+          <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+            <circle cx="50" cy="50" r="44" stroke="#e5b842" stroke-width="2"/>
+            <path d="M34 68 V42 L39 36 V68 M45 68 V28 L50 22 L55 28 V68 M61 68 V36 L66 42 V68" stroke="#f7d070" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M28 68 H72" stroke="#e5b842" stroke-width="2"/>
+          </svg>
+          <span class="brand-title font-royal">PISTA HOUSE</span>
+        </div>
+        <button id="closeMobileNavBtn" class="mobile-nav-close" aria-label="Close Menu">✕</button>
+      </div>
+
+      <div class="mobile-nav-links">
+        <a href="#biryani" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🍲</span>
+          <span>Royal Zafrani Biryani</span>
+        </a>
+        <a href="#haleem" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🥣</span>
+          <span>GI-Tagged Haleem</span>
+        </a>
+        <a href="#featured-roat" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🥮</span>
+          <span>Zafrani Dum Ke Roat</span>
+        </a>
+        <a href="#travel-pack" class="mobile-nav-link">
+          <span class="mobile-nav-icon">✈️</span>
+          <span>Worldwide Air Travel Packs</span>
+        </a>
+        <a href="#menu" class="mobile-nav-link">
+          <span class="mobile-nav-icon">📜</span>
+          <span>Complete Royal Menu</span>
+        </a>
+        <a href="#awards" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🏆</span>
+          <span>Heritage & Global Recognition</span>
+        </a>
+        <a href="#testimonials" class="mobile-nav-link">
+          <span class="mobile-nav-icon">⭐</span>
+          <span>Customer Reviews</span>
+        </a>
+        <a href="#franchise" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🤝</span>
+          <span>Global Franchise Opportunity</span>
+        </a>
+        <a href="#faqs" class="mobile-nav-link">
+          <span class="mobile-nav-icon">❓</span>
+          <span>FAQs & Support</span>
+        </a>
+      </div>
+
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-actions">
+          <div class="mobile-currency-row">
+            <span>Currency:</span>
+            <select id="mobileCurrencySelect" class="currency-selector">
+              <option value="INR">₹ INR</option>
+              <option value="USD">$ USD</option>
+              <option value="AED">AED (د.إ)</option>
+              <option value="SAR">SAR (﷼)</option>
+              <option value="GBP">£ GBP</option>
+            </select>
+          </div>
+        </div>
+        <a href="https://wa.me/919396500786?text=Hello%20Pista%20House%2C%20I%20would%20like%20to%20order" target="_blank" class="whatsapp-order-btn" style="margin-top: 1rem; width: 100%;">
+          <span>💬 Order on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Site Content Wrapper -->
   <div class="site-wrapper">
@@ -367,7 +449,7 @@
               <p class="featured-desc">The crown jewel of Hyderabadi confectionery. Richly infused with whole pistachios, toasted almonds, and pure desi ghee.</p>
               <div class="featured-footer">
                 <div class="featured-price">₹880</div>
-                <button class="btn-royal" data-add-id="ph-roat-1kg">
+                <button class="btn-featured-add" data-add-id="ph-roat-1kg">
                   <span>+ Add to Tray</span>
                 </button>
               </div>
@@ -389,7 +471,7 @@
               <p class="featured-desc">Authentic half-kilogram box packed with nutty goodness. Perfect for teatime indulgence and gifting across India.</p>
               <div class="featured-footer">
                 <div class="featured-price">₹440</div>
-                <button class="btn-royal" data-add-id="ph-roat-500g">
+                <button class="btn-featured-add" data-add-id="ph-roat-500g">
                   <span>+ Add to Tray</span>
                 </button>
               </div>
@@ -399,7 +481,7 @@
           <!-- Card 3: Pista Special Cookies -->
           <div class="featured-product-card tilt-card">
             <div class="featured-img-wrap">
-              <img src="https://cdn.shopify.com/s/files/1/0856/2720/7967/files/P1477789.jpg?v=1750774026" alt="Pista Special 250g" class="featured-img" />
+              <img src="https://cdn.shopify.com/s/files/1/0856/2720/7967/files/AssortedCookies3.jpg?v=1755588636" alt="Pista Special 250g" class="featured-img" />
               <span class="badge-royal badge-gi product-badge-overlay">Pista Signature</span>
             </div>
             <div class="featured-body">
@@ -411,7 +493,7 @@
               <p class="featured-desc">Loaded with Californian and Iranian pistachios. Crisp, buttery, and baked fresh every single morning.</p>
               <div class="featured-footer">
                 <div class="featured-price">₹220</div>
-                <button class="btn-royal" data-add-id="ph-pista-special">
+                <button class="btn-featured-add" data-add-id="ph-pista-special">
                   <span>+ Add to Tray</span>
                 </button>
               </div>

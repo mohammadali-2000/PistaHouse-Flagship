@@ -13,7 +13,7 @@ export function initGSAPAnimations() {
     let progress = { value: 0 };
     gsap.to(progress, {
       value: 100,
-      duration: 1.5,
+      duration: 1.0,
       ease: 'power2.inOut',
       onUpdate: () => {
         countEl.textContent = `${Math.floor(progress.value)}%`;
@@ -22,10 +22,11 @@ export function initGSAPAnimations() {
       onComplete: () => {
         gsap.to(preloader, {
           yPercent: -100,
-          duration: 0.85,
+          duration: 0.6,
           ease: 'power4.inOut',
           onComplete: () => {
             preloader.classList.add('loaded');
+            preloader.style.display = 'none';
             animateHeroEntry();
           }
         });
@@ -35,13 +36,22 @@ export function initGSAPAnimations() {
     animateHeroEntry();
   }
 
-  // 2. Header Scroll Transition
+  // 2. Header Scroll Transition & Announcement Bar Slide-out
   const header = document.querySelector('.royal-header');
+  const annBar = document.querySelector('.announcement-bar');
   if (header) {
     ScrollTrigger.create({
       start: 'top -40',
       end: 99999,
-      toggleClass: { className: 'scrolled', targets: header }
+      onToggle: (self) => {
+        if (self.isActive) {
+          header.classList.add('scrolled');
+          if (annBar) annBar.style.transform = 'translateY(-100%)';
+        } else {
+          header.classList.remove('scrolled');
+          if (annBar) annBar.style.transform = 'translateY(0)';
+        }
+      }
     });
   }
 
@@ -54,7 +64,7 @@ export function initGSAPAnimations() {
     ease: 'sine.inOut'
   });
 
-  // 4. Scroll-Driven Biryani Motion (Biryani Going Down / Flying Across Hero on Scroll)
+  // 4. Subtle Parallax for Biryani Handi on Scroll
   const heroDishStage = document.querySelector('.hero-dish-stage');
   if (heroDishStage) {
     gsap.to(heroDishStage, {
@@ -62,11 +72,11 @@ export function initGSAPAnimations() {
         trigger: '.hero-section',
         start: 'top top',
         end: 'bottom top',
-        scrub: 1.2
+        scrub: 1
       },
-      y: 180,
-      scale: 0.9,
-      rotateX: 14,
+      y: 45,
+      scale: 0.95,
+      opacity: 0.85,
       ease: 'none'
     });
 
@@ -75,26 +85,25 @@ export function initGSAPAnimations() {
       scrollTrigger: {
         trigger: '.hero-section',
         start: 'top top',
-        end: '65% top',
+        end: '40% top',
         scrub: 1
       },
       opacity: 0,
-      scale: 0.8,
-      y: -35,
+      scale: 0.85,
+      y: -20,
       stagger: 0.05
     });
 
-    // Parallax Spices Moving in Opposing Directions on Scroll
+    // Parallax Spices Moving subtly on Scroll
     gsap.to('.spice-star-1', {
       scrollTrigger: {
         trigger: '.hero-section',
         start: 'top top',
         end: 'bottom top',
-        scrub: 1.5
+        scrub: 1.2
       },
-      y: -140,
-      x: -60,
-      rotate: 90,
+      y: -50,
+      rotate: 45,
       ease: 'none'
     });
 
@@ -103,15 +112,14 @@ export function initGSAPAnimations() {
         trigger: '.hero-section',
         start: 'top top',
         end: 'bottom top',
-        scrub: 1.5
+        scrub: 1.2
       },
-      y: 200,
-      x: 80,
-      rotate: -120,
+      y: 60,
+      rotate: -45,
       ease: 'none'
     });
 
-    // Giant Watermark Behind Product Parallax
+    // Subtle Watermark Behind Product Parallax
     gsap.to('.hero-bg-text', {
       scrollTrigger: {
         trigger: '.hero-section',
@@ -119,9 +127,8 @@ export function initGSAPAnimations() {
         end: 'bottom top',
         scrub: 1
       },
-      y: 150,
-      scale: 1.12,
-      opacity: 0.03,
+      y: 50,
+      opacity: 0.01,
       ease: 'none'
     });
   }
