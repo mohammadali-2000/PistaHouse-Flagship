@@ -1,0 +1,68 @@
+:root {
+  /* ==========================================================================
+     LIGHT THEME - ROYAL IVORY & NIZAMI GOLD PALETTE
+     Ultra-luxurious, clean, editorial, and crystal-clear legibility
+     ========================================================================== */
+  
+  /* Primary Backgrounds */
+  --bg-primary: #faf6f0;         /* Royal Cream Ivory */
+  --bg-secondary: #f3ece0;       /* Warm Royal Parchment */
+  --bg-tertiary: #ebe2d2;        /* Soft Heritage Oat */
+  
+  /* Luxury Light Cards & Glass */
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --bg-card-hover: #ffffff;
+  --bg-card-elevated: rgba(255, 255, 255, 0.98);
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --bg-glass-elevated: rgba(255, 255, 255, 0.96);
+  --bg-dark-accent: #0f3627;      /* Royal Emerald for contrast badges & footer */
+
+  /* Text & Readability (High Contrast & Clean) */
+  --text-primary: #122119;       /* Deep Imperial Obsidian / Dark Forest */
+  --text-secondary: #3b4e44;     /* Refined Editorial Deep Slate */
+  --text-muted: #61776b;         /* Crisp Mid-Tone Sage */
+  --text-dim: #8ba094;           /* Subtle Label Gray */
+  --text-cream: #faf6f0;         /* For dark contrast sections */
+
+  /* Nizami Imperial Gold */
+  --gold-primary: #b88628;
+  --gold-light: #d4a03e;
+  --gold-deep: #8c6012;
+  --gold-glow: rgba(184, 134, 40, 0.22);
+  --gold-foil: linear-gradient(135deg, #d4a03e 0%, #b88628 50%, #8c6012 100%);
+  --gold-foil-text: linear-gradient(135deg, #996c14 0%, #c4922b 45%, #7a5108 100%);
+
+  /* Pista Green & Saffron Zafran Accents */
+  --pista-royal: #165b40;
+  --pista-light: #e8f5ee;
+  --pista-border: rgba(22, 91, 64, 0.25);
+  --zafran-accent: #d95a1e;
+  --zafran-light: #fef2ea;
+  --zafran-glow: rgba(217, 90, 30, 0.25);
+
+  /* Hairline Borders & Dividers */
+  --border-gold: rgba(184, 134, 40, 0.25);
+  --border-gold-bright: rgba(184, 134, 40, 0.6);
+  --border-subtle: rgba(18, 33, 25, 0.08);
+  --border-card: rgba(184, 134, 40, 0.18);
+
+  /* Clean Luxury Shadows (Light Mode) */
+  --shadow-sm: 0 4px 15px rgba(18, 33, 25, 0.04);
+  --shadow-md: 0 10px 30px rgba(18, 33, 25, 0.07);
+  --shadow-lg: 0 20px 50px rgba(18, 33, 25, 0.1);
+  --shadow-gold: 0 12px 35px rgba(184, 134, 40, 0.18);
+  --shadow-pista: 0 12px 35px rgba(22, 91, 64, 0.15);
+
+  /* Blur & Glassmorphism */
+  --glass-blur: blur(20px);
+  --glass-blur-heavy: blur(28px);
+
+  /* Motion Curves */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-smooth: 0.4s var(--ease-out-expo);
+
+  /* Layout */
+  --container-max: 1320px;
+  --section-pad: clamp(80px, 9vw, 130px);
+}

@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pista House | The Royal Taste of Hyderabad • Flagship Experience</title>
+  <meta name="description" content="Experience 25+ years of royal Hyderabadi culinary legacy. World-renowned GI-Tagged Haleem, Zafrani Dum Biryani travel packs, and authentic Osmania biscuits delivered worldwide." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>" />
+  
+  <!-- Main Stylesheet Bundle -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+
+  <!-- Royal Preloader Curtain -->
+  <div class="royal-preloader">
+    <div class="preloader-emblem">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="46" stroke="#e5b842" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <circle cx="50" cy="50" r="38" stroke="#f7d070" stroke-width="1"/>
+        <!-- Charminar Iconic Silhouette Motif -->
+        <path d="M30 70 V38 L36 32 V70 M42 70 V24 L50 16 L58 24 V70 M64 70 V32 L70 38 V70" stroke="#f7d070" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M26 70 H74" stroke="#e5b842" stroke-width="2"/>
+        <path d="M44 70 C44 64 47 60 50 60 C53 60 56 64 56 70" stroke="#e5b842" stroke-width="2"/>
+      </svg>
+    </div>
+    <div class="preloader-count">0%</div>
+    <div class="preloader-status">Preparing Royal Dastarkhwan</div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+  </div>
+
+  <!-- Custom Cursor Elements (Desktop Only) -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-follower"></div>
+
+  <!-- Interactive Spice & Ambient Dust Canvas -->
+  <canvas id="spiceCanvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="ambient-glow-orb ambient-orb-1"></div>
+  <div class="ambient-glow-orb ambient-orb-2"></div>
+  <div class="ambient-glow-orb ambient-orb-3"></div>
+
+  <!-- Top Announcement Bar (Original Site Feature) -->
+  <div class="announcement-bar">
+    <span>🚚 Shipping Available All Over India! Free Shipping on Orders Above ₹1,499</span>
+    <span style="opacity: 0.6;">|</span>
+    <span>✈️ Worldwide Air Cargo to USA, UAE & 40+ Countries</span>
+    <a href="#menu" class="announcement-link">Shop Delicacies →</a>
+  </div>
+
+  <!-- Floating Luxury Header -->
+  <header class="royal-header">
+    <a href="#" class="brand-logo-wrap">
+      <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="44" stroke="#e5b842" stroke-width="2"/>
+        <path d="M34 68 V42 L39 36 V68 M45 68 V28 L50 22 L55 28 V68 M61 68 V36 L66 42 V68" stroke="#f7d070" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M28 68 H72" stroke="#e5b842" stroke-width="2"/>
+      </svg>
+      <div class="brand-logo-text">
+        <span class="brand-title">PISTA HOUSE</span>
+        <span class="brand-tagline">ESTD 1997 • CHARMINAR</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#biryani" class="nav-link">Royal Biryani</a></li>
+        <li><a href="#haleem" class="nav-link">GI Haleem</a></li>
+        <li><a href="#featured-roat" class="nav-link">Dum Ke Roat</a></li>
+        <li><a href="#travel-pack" class="nav-link">Travel Packs</a></li>
+        <li><a href="#menu" class="nav-link">Royal Menu</a></li>
+        <li><a href="#awards" class="nav-link">Awards</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#franchise" class="nav-link">Franchise</a></li>
+        <li><a href="#faqs" class="nav-link">FAQs</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <!-- Currency Switcher -->
+      <select id="currencySelect" class="currency-selector" title="Choose Currency">
+        <option value="INR">₹ INR</option>
+        <option value="USD">$ USD</option>
+        <option value="AED">AED (د.إ)</option>
+        <option value="SAR">SAR (﷼)</option>
+        <option value="GBP">£ GBP</option>
+      </select>
+
+      <!-- Royal Ambience Sound Toggle -->
+      <button id="soundToggleBtn" class="btn-sound-toggle" title="Toggle Royal Sitar Ambience">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <line x1="23" y1="9" x2="17" y2="15"/>
+          <line x1="17" y1="9" x2="23" y2="15"/>
+        </svg>
+      </button>
+
+      <!-- Cart Toggle Button -->
+      <button class="btn-cart-toggle" data-toggle-cart>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+        <span>Tray</span>
+        <span class="cart-count-badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Site Content Wrapper -->
+  <div class="site-wrapper">
+
+    <!-- ==========================================================================
+         CINEMATIC CENTERED HERO STAGE (AWARD-WINNING MOTION)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <!-- Giant Background Watermark Typography -->
+      <div class="hero-bg-text">PISTA HOUSE</div>
+
+      <div class="hero-center-stage">
+        <div class="hero-top-badge">
+          <span class="badge-dot"></span>
+          <span>ESTD. 1997 • CHARMINAR, HYDERABAD • GI TAGGED</span>
+        </div>
+
+        <h1 class="hero-cinematic-title">
+          <span class="title-line-1">THE ROYAL</span>
+          <span class="gold-gradient-text">ZAFRANI BIRYANI</span>
+        </h1>
+
+        <p class="hero-center-desc">
+          The 25-year culinary icon of Hyderabad, slow-cooked over wood bhattis. Infused with Iranian saffron, pure desi ghee, and shipped fresh across 40+ countries.
+        </p>
+
+        <!-- Center 3D Floating Dish Stage -->
+        <div class="hero-dish-stage">
+          <div class="dish-glow-aura"></div>
+
+          <!-- Parallax Floating Spices -->
+          <img src="/assets/spices_cutout.png" class="floating-spice spice-star-1" alt="Royal Spices" />
+          <img src="/assets/spices_cutout.png" class="floating-spice spice-cardamom" alt="Royal Spices" />
+
+          <!-- Transparent Cutout Floating Biryani Handi in smooth floating wrapper -->
+          <div class="dish-float-wrapper">
+            <img src="/assets/biryani_cutout.png" alt="Pista House Royal Zafrani Biryani Handi" class="hero-dish-img" />
+          </div>
+
+          <!-- Interactive Callout Badges with pointer details -->
+          <div class="dish-callout callout-left-1">
+            <div class="callout-card">
+              <span class="callout-tag">INGREDIENT 01</span>
+              <strong>Aged Shahi Basmati</strong>
+              <span>2-Year cured fragrant grains</span>
+            </div>
+          </div>
+
+          <div class="dish-callout callout-right-1">
+            <div class="callout-card">
+              <span class="callout-tag">GLOBAL DISPATCH</span>
+              <strong>45-Day Fresh Pack</strong>
+              <span>Ready to Heat & Eat anywhere</span>
+            </div>
+          </div>
+
+          <div class="dish-callout callout-left-2">
+            <div class="callout-card">
+              <span class="callout-tag">AUTHENTIC RECIPE</span>
+              <strong>100% Pure Desi Ghee</strong>
+              <span>Wood bhatti slow dum cooking</span>
+            </div>
+          </div>
+
+          <div class="dish-callout callout-right-2">
+            <div class="callout-card">
+              <span class="callout-tag">EXPRESS COURIER</span>
+              <strong>Air Cargo to 40+ Nations</strong>
+              <span>USA • UAE • UK • Pan-India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Centered Action CTAs -->
+        <div class="hero-action-buttons">
+          <a href="#menu" class="btn-royal">
+            <span>Order Royal Travel Pack</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="#biryani" class="btn-royal-outline">
+            <span>Explore The Craft ↓</span>
+          </a>
+        </div>
+
+        <!-- Centered Live Stats Counter -->
+        <div class="hero-stats-row">
+          <div class="stat-item">
+            <span class="stat-num stat-legacy">25+</span>
+            <span class="stat-label">Years of Legacy</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num stat-outlets">85+</span>
+            <span class="stat-label">Global Outlets</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num stat-patrons">25M+</span>
+            <span class="stat-label">Patrons Served</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num stat-shelf">45-Day</span>
+            <span class="stat-label">Retort Freshness</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ROYAL INFINITE TICKER
+         ========================================================================== -->
+    <div class="royal-marquee-wrap">
+      <div class="marquee-track">
+        <div class="marquee-item">CHARMINAR FLAGSHIP <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">WORLD-FAMOUS HALEEM (GI TAG) <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">ZAFRANI DUM BIRYANI <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">DALLAS, TEXAS <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">DUBAI & SHARJAH <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">MUHARRAM ZAFRANI DUM KE ROAT <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">AUTHENTIC OSMANIA BISCUITS <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">48-HOUR WORLDWIDE AIR DISPATCH <span class="marquee-star">✦</span></div>
+        <!-- Repeat for seamless infinite loop -->
+        <div class="marquee-item">CHARMINAR FLAGSHIP <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">WORLD-FAMOUS HALEEM (GI TAG) <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">ZAFRANI DUM BIRYANI <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">DALLAS, TEXAS <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">DUBAI & SHARJAH <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">MUHARRAM ZAFRANI DUM KE ROAT <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">AUTHENTIC OSMANIA BISCUITS <span class="marquee-star">✦</span></div>
+        <div class="marquee-item">48-HOUR WORLDWIDE AIR DISPATCH <span class="marquee-star">✦</span></div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         SHOP BY CATEGORY (ORIGINAL SITE FEATURE)
+         ========================================================================== -->
+    <section class="category-section" id="categories">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto;">
+          <span class="section-subtitle">EXPLORE BY SPECIALTY</span>
+          <h2 class="section-title">Shop by <span class="gold-gradient-text">Category</span></h2>
+          <p style="color: var(--text-muted);">
+            Hand-crafted delicacies prepared fresh in Hyderabad, sealed with royal heritage.
+          </p>
+        </div>
+
+        <div class="category-grid">
+          <a href="#menu" class="category-card" onclick="document.querySelector('[data-filter=\'biryani\']').click()">
+            <div class="category-icon-box">🥘</div>
+            <div class="category-title">Royal Biryani</div>
+            <div class="category-count">Travel Packs</div>
+          </a>
+
+          <a href="#menu" class="category-card" onclick="document.querySelector('[data-filter=\'haleem\']').click()">
+            <div class="category-icon-box">🥣</div>
+            <div class="category-title">GI Haleem</div>
+            <div class="category-count">World-Famous</div>
+          </a>
+
+          <a href="#menu" class="category-card" onclick="document.querySelector('[data-filter=\'roat\']').click()">
+            <div class="category-icon-box">🥮</div>
+            <div class="category-title">Dum Ke Roat</div>
+            <div class="category-count">Muharram Special</div>
+          </a>
+
+          <a href="#menu" class="category-card" onclick="document.querySelector('[data-filter=\'biscuits\']').click()">
+            <div class="category-icon-box">🍪</div>
+            <div class="category-title">Osmania & Cookies</div>
+            <div class="category-count">Fresh Baked</div>
+          </a>
+
+          <a href="#menu" class="category-card" onclick="document.querySelector('[data-filter=\'sticks\']').click()">
+            <div class="category-icon-box">🥖</div>
+            <div class="category-title">Pista Sticks</div>
+            <div class="category-count">Crispy Savories</div>
+          </a>
+
+          <a href="#menu" class="category-card" onclick="document.querySelector('[data-filter=\'hampers\']').click()">
+            <div class="category-icon-box">🎁</div>
+            <div class="category-title">Gift Hampers</div>
+            <div class="category-count">Royal Assortments</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE 4 CORE TRUST PILLARS (ORIGINAL SITE FEATURE)
+         ========================================================================== -->
+    <section class="trust-pillars-section">
+      <div class="container">
+        <div class="trust-pillars-grid">
+          <div class="trust-pillar-card">
+            <div class="trust-icon-wrap">👨‍🍳</div>
+            <div>
+              <div class="trust-title">Authentic Recipes</div>
+              <div class="trust-desc">25+ Years of unbroken royal heritage and proprietary 1997 Nizami spice blends.</div>
+            </div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <div class="trust-icon-wrap">✈️</div>
+            <div>
+              <div class="trust-title">Local & Global Delivery</div>
+              <div class="trust-desc">Same-day in Hyderabad, 24h Pan-India, and 48h express air cargo to 40+ nations.</div>
+            </div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <div class="trust-icon-wrap">🏅</div>
+            <div>
+              <div class="trust-title">Certified Ingredients</div>
+              <div class="trust-desc">100% Halal certified, pure desi ghee, FSSAI certified, and Geographical Indication origin.</div>
+            </div>
+          </div>
+
+          <div class="trust-pillar-card">
+            <div class="trust-icon-wrap">🛡️</div>
+            <div>
+              <div class="trust-title">Freshness Guaranteed</div>
+              <div class="trust-desc">Multi-layer retort foil pouches locking in 45-day freshness with zero preservatives.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         PREMIUM DUM KE ROAT & HERITAGE SPOTLIGHT (ORIGINAL SITE FEATURE)
+         ========================================================================== -->
+    <section class="featured-showcase-section" id="featured-roat">
+      <div class="container">
+        <div style="text-align: center; max-width: 750px; margin-inline: auto;">
+          <span class="section-subtitle">NOW SHIPPING PAN-INDIA & WORLDWIDE</span>
+          <h2 class="section-title">Premium <span class="gold-gradient-text">Dum Ke Roat</span> Collection</h2>
+          <p style="color: var(--text-muted); font-size: 1rem;">
+            The sacred baked delicacy of Hyderabad. Slow-baked with toasted almond meal, pure desi ghee, and Iranian saffron for an unforgettable crunchy caramel crust.
+          </p>
+        </div>
+
+        <div class="featured-showcase-grid">
+          <!-- Card 1: 1kg Roat -->
+          <div class="featured-product-card tilt-card">
+            <div class="featured-img-wrap">
+              <img src="/assets/chai_osmania_roat.jpg" alt="Zafrani Dum Ke Roat 1kg" class="featured-img" />
+              <span class="badge-royal badge-zafran product-badge-overlay">Muharram Special</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-meta">
+                <span class="featured-weight">1kg Heritage Tin Box</span>
+                <span class="featured-rating">★ 4.9 (4,280 reviews)</span>
+              </div>
+              <h3 class="featured-title">Zafrani Dum Ke Roat (1kg)</h3>
+              <p class="featured-desc">The crown jewel of Hyderabadi confectionery. Richly infused with whole pistachios, toasted almonds, and pure desi ghee.</p>
+              <div class="featured-footer">
+                <div class="featured-price">₹880</div>
+                <button class="btn-royal" data-add-id="ph-roat-1kg">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: 500g Roat -->
+          <div class="featured-product-card tilt-card">
+            <div class="featured-img-wrap">
+              <img src="https://cdn.shopify.com/s/files/1/0856/2720/7967/files/P1477777.jpg?v=1750773883" alt="Zafrani Dum Ke Roat 500g" class="featured-img" />
+              <span class="badge-royal badge-royal product-badge-overlay">Best Seller</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-meta">
+                <span class="featured-weight">500g Royal Pack</span>
+                <span class="featured-rating">★ 4.8 (2,910 reviews)</span>
+              </div>
+              <h3 class="featured-title">Zafrani Dum Ke Roat (500g)</h3>
+              <p class="featured-desc">Authentic half-kilogram box packed with nutty goodness. Perfect for teatime indulgence and gifting across India.</p>
+              <div class="featured-footer">
+                <div class="featured-price">₹440</div>
+                <button class="btn-royal" data-add-id="ph-roat-500g">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Pista Special Cookies -->
+          <div class="featured-product-card tilt-card">
+            <div class="featured-img-wrap">
+              <img src="https://cdn.shopify.com/s/files/1/0856/2720/7967/files/P1477789.jpg?v=1750774026" alt="Pista Special 250g" class="featured-img" />
+              <span class="badge-royal badge-gi product-badge-overlay">Pista Signature</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-meta">
+                <span class="featured-weight">250g Signature Box</span>
+                <span class="featured-rating">★ 4.9 (1,840 reviews)</span>
+              </div>
+              <h3 class="featured-title">Pista Special Cookies (250g)</h3>
+              <p class="featured-desc">Loaded with Californian and Iranian pistachios. Crisp, buttery, and baked fresh every single morning.</p>
+              <div class="featured-footer">
+                <div class="featured-price">₹220</div>
+                <button class="btn-royal" data-add-id="ph-pista-special">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Osmania Biscuits Box -->
+          <div class="featured-product-card tilt-card">
+            <div class="featured-img-wrap">
+              <img src="https://cdn.shopify.com/s/files/1/0856/2720/7967/files/Gemini_Generated_Image_9xgnct9xgnct9xgn.png?v=1788601443" alt="Premium Osmania Biscuits" class="featured-img" />
+              <span class="badge-royal badge-royal product-badge-overlay">Legendary</span>
+            </div>
+            <div class="featured-body">
+              <div class="featured-meta">
+                <span class="featured-weight">250g Classic Pack</span>
+                <span class="featured-rating">★ 5.0 (9,450 reviews)</span>
+              </div>
+              <h3 class="featured-title">Premium Osmania Biscuits</h3>
+              <p class="featured-desc">The melt-in-mouth sweet and savory biscuit crafted for Mir Osman Ali Khan. The undisputed companion to Irani Chai.</p>
+              <div class="featured-footer">
+                <div class="featured-price">₹130</div>
+                <button class="btn-royal" data-add-id="ph-osmania-250g">
+                  <span>+ Add to Tray</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CULINARY DECONSTRUCTION (PINNED SCROLL)
+         ========================================================================== -->
+    <section class="pinned-deconstruction-section" id="biryani">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto;">
+          <span class="section-subtitle">THE ROYAL CRAFT</span>
+          <h2 class="section-title">Anatomy of Authentic <span class="gold-gradient-text">Nizami Dum Biryani</span></h2>
+          <p style="color: var(--text-muted);">
+            Prepared exactly as served in the historic palaces of Hyderabad. Every handi undergoes an unbroken 4-hour slow-fire dum ritual.
+          </p>
+        </div>
+
+        <div class="deconstruct-grid">
+          <div class="deconstruct-layers">
+            <div class="layer-card active">
+              <div class="layer-number">01</div>
+              <div class="layer-info">
+                <h4>Aged Royal Basmati Rice</h4>
+                <p>Extra-long aged grain, parboiled with whole spices and layered delicately with Iranian saffron milk infusion for two-tone jewel hues.</p>
+              </div>
+            </div>
+
+            <div class="layer-card">
+              <div class="layer-number">02</div>
+              <div class="layer-info">
+                <h4>24 Secret Hand-Pounded Spices</h4>
+                <p>Star anise, shahi jeera, mace, cardamom, cinnamon, and stone flower blended into the proprietary 1997 Pista House Zafrani spice secret.</p>
+              </div>
+            </div>
+
+            <div class="layer-card">
+              <div class="layer-number">03</div>
+              <div class="layer-info">
+                <h4>Succulent Marinated Mutton & Chicken</h4>
+                <p>Tender prime cuts steeped for 12 hours in fresh churned yogurt, mint, coriander, ginger-garlic paste, and green chili essence.</p>
+              </div>
+            </div>
+
+            <div class="layer-card">
+              <div class="layer-number">04</div>
+              <div class="layer-info">
+                <h4>Pure Desi Ghee & Edible Silver Vark</h4>
+                <p>Finished with golden caramelized birista (crisp onions), roasted cashews, pure desi ghee seal, and pure silver vark garnish.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="deconstruct-visual">
+            <img src="/assets/royal_biryani_handi.jpg" alt="Culinary Craft of Hyderabadi Dum Biryani" class="deconstruct-visual-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         THE GI-TAGGED HALEEM CHAMBER
+         ========================================================================== -->
+    <section class="haleem-chamber-section" id="haleem">
+      <div class="container">
+        <div class="haleem-grid">
+          <div class="haleem-visual-box">
+            <img src="/assets/royal_haleem_feast.jpg" alt="World-Famous GI Tagged Hyderabadi Haleem" class="haleem-main-img" />
+          </div>
+
+          <div class="haleem-content">
+            <span class="section-subtitle">A GLOBAL PHENOMENON</span>
+            <h2 class="section-title">The Legend of <span class="zafran-gradient-text">Hyderabadi Haleem</span></h2>
+            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">
+              Pista House is the pioneer that carried Hyderabadi Haleem to the world stage—earning the official <strong>Geographical Indication (GI) tag</strong>. Simmered for 12 continuous hours over open wooden bhattis, hand-pounded by master khansamas with pure desi ghee until meat, wheat, and spices fuse into a velvety royal elixir.
+            </p>
+
+            <div class="haleem-specs-list">
+              <div class="haleem-spec-item">
+                <div class="haleem-spec-title">12 Hours Cooking</div>
+                <div class="haleem-spec-desc">Slow-wood bhatti fire</div>
+              </div>
+              <div class="haleem-spec-item">
+                <div class="haleem-spec-title">100% Pure Desi Ghee</div>
+                <div class="haleem-spec-desc">Uncompromised richness</div>
+              </div>
+              <div class="haleem-spec-item">
+                <div class="haleem-spec-title">Iranian Zafran Infusion</div>
+                <div class="haleem-spec-desc">Authentic royal aroma</div>
+              </div>
+              <div class="haleem-spec-item">
+                <div class="haleem-spec-title">GI Tag Certified</div>
+                <div class="haleem-spec-desc">Authentic origin protected</div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: center;">
+              <button class="btn-royal" data-add-id="ph-03">
+                <span>Order 1kg Royal Haleem Tin</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         "HEAT & EAT" 3D TRAVEL PACK BOX
+         ========================================================================== -->
+    <section class="travel-pack-section" id="travel-pack">
+      <div class="container">
+        <div class="travel-pack-grid">
+          <div class="travel-pack-info">
+            <span class="section-subtitle">CULINARY INNOVATION</span>
+            <h2 class="section-title">Heat & Eat <span class="gold-gradient-text">Travel Pack</span></h2>
+            <p style="color: var(--text-muted); line-height: 1.7;">
+              Take the true taste of Charminar anywhere in the world. Utilizing NASA-grade retort sterilization technology, our travel packs preserve 100% authentic flavor, moisture, and aroma for <strong>45 days with zero artificial preservatives</strong>.
+            </p>
+
+            <div class="prep-steps-tabs">
+              <div class="prep-step-tab active">
+                <div class="step-icon-bubble">1</div>
+                <div>
+                  <h4 style="color: var(--text-primary); margin-bottom: 0.2rem; font-weight: 700;">Tear Pouch & Place</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">Cut open the sterile inner gold foil pack and empty into a bowl, or immerse pouch in hot water.</p>
+                </div>
+              </div>
+
+              <div class="prep-step-tab">
+                <div class="step-icon-bubble">2</div>
+                <div>
+                  <h4 style="color: var(--text-primary); margin-bottom: 0.2rem; font-weight: 700;">Microwave for 3 Minutes</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">Heat on high power for 180 seconds to awaken the infused desi ghee and saffron basmati steam.</p>
+                </div>
+              </div>
+
+              <div class="prep-step-tab">
+                <div class="step-icon-bubble">3</div>
+                <div>
+                  <h4 style="color: var(--text-primary); margin-bottom: 0.2rem; font-weight: 700;">Unveil Royal Aroma & Relish</h4>
+                  <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.5;">Plate onto your dastarkhwan, garnish with lemon and fried onions, and experience authentic Hyderabad.</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn-royal" data-add-id="ph-01">
+              <span>Add Travel Pack to Tray</span>
+            </button>
+          </div>
+
+          <div class="travel-3d-box-wrap">
+            <div class="travel-box-card">
+              <img src="/assets/travel_pack_box.jpg" alt="Pista House Zafrani Biryani Travel Pack Packaging" class="travel-box-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         IRANI CHAI & OSMANIA BISCUIT RITUAL
+         ========================================================================== -->
+    <section class="chai-osmania-section" id="chai-osmania">
+      <div class="container">
+        <div class="chai-grid">
+          <div class="chai-interactive-wrapper">
+            <img src="/assets/chai_osmania_roat.jpg" alt="Irani Chai with Osmania Biscuits and Zafrani Dum Ke Roat" class="chai-img" />
+            <div class="dunk-prompt-pill">
+              <span>✨ Hover or Tap to Dunk Biscuit in Irani Chai</span>
+            </div>
+          </div>
+
+          <div class="chai-content">
+            <span class="section-subtitle">THE HYDERABADI SOUL</span>
+            <h2 class="section-title">Irani Chai, <span class="gold-gradient-text">Osmania & Dum Ke Roat</span></h2>
+            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem;">
+              No culinary journey through Hyderabad is complete without the sacred teatime ritual. Pista House Osmania biscuits, balanced between sweet and gentle salt, melt effortlessly when dunked into velvety, malai-rich Irani Chai.
+            </p>
+            <p style="color: var(--text-muted); line-height: 1.7; margin-top: 1rem; font-size: 0.95rem;">
+              Our Muharram special <strong>Zafrani Dum Ke Roat</strong>—baked slowly with rich almond meal, saffron essence, and whole pistachios—remains an iconic Hyderabadi delicacy celebrated worldwide.
+            </p>
+
+            <div style="display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
+              <button class="btn-royal" data-add-id="ph-05">
+                <span>Add Osmania Biscuits Box</span>
+              </button>
+              <button class="btn-royal-outline" data-add-id="ph-04">
+                <span>Add Zafrani Dum Ke Roat</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         ROYAL MENU CATALOG
+         ========================================================================== -->
+    <section class="menu-catalog-section" id="menu">
+      <div class="container">
+        <div style="text-align: center; max-width: 750px; margin-inline: auto;">
+          <span class="section-subtitle">DIRECT FROM THE FLAGSHIP</span>
+          <h2 class="section-title">The Royal <span class="gold-gradient-text">Dastarkhwan Menu</span></h2>
+          <p style="color: var(--text-muted);">
+            Freshly prepared, vacuum sealed, and shipped directly with tamper-proof royal packaging.
+          </p>
+        </div>
+
+        <div class="menu-filter-bar">
+          <button class="filter-tab active" data-filter="all">All Specialties</button>
+          <button class="filter-tab" data-filter="biryani">Royal Biryani</button>
+          <button class="filter-tab" data-filter="haleem">GI Haleem</button>
+          <button class="filter-tab" data-filter="roat">Dum Ke Roat</button>
+          <button class="filter-tab" data-filter="biscuits">Biscuits & Cookies</button>
+          <button class="filter-tab" data-filter="hampers">Gift Hampers</button>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <!-- Dynamically populated by main.js with authentic products -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         GLOBAL DELIVERY & TRANSIT CALCULATOR
+         ========================================================================== -->
+    <section class="global-section" id="transit">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto;">
+          <span class="section-subtitle">SEAMLESS GLOBAL LOGISTICS</span>
+          <h2 class="section-title">Worldwide Air Courier <span class="gold-gradient-text">Delivery</span></h2>
+          <p style="color: var(--text-muted);">
+            We ship via direct temperature-controlled express cargo flights from Hyderabad Rajiv Gandhi International Airport to your doorstep.
+          </p>
+        </div>
+
+        <div class="transit-calculator-card">
+          <div style="font-size: 1.1rem; font-weight: 700; color: var(--gold-light);">Select Destination City:</div>
+
+          <div class="transit-city-pills">
+            <button class="transit-pill active" data-city="hyderabad">Hyderabad (Flagship)</button>
+            <button class="transit-pill" data-city="mumbai">Mumbai / Delhi</button>
+            <button class="transit-pill" data-city="dubai">Dubai & UAE</button>
+            <button class="transit-pill" data-city="usa">Dallas & USA</button>
+            <button class="transit-pill" data-city="london">London & UK</button>
+          </div>
+
+          <div class="transit-result-box">
+            <div>
+              <div style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-dim);">Estimated Transit Time</div>
+              <div class="transit-time-val">Same-Day Express (3-4 Hours)</div>
+              <div class="transit-carrier-desc" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem;">
+                Direct City Dispatch • Fresh hot handi or vacuum-sealed box.
+              </div>
+            </div>
+
+            <button class="btn-royal" data-toggle-cart>
+              <span>Dispatch My Order</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         AWARDS & RECOGNITIONS SHOWCASE (ORIGINAL SITE FEATURE)
+         ========================================================================== -->
+    <section class="awards-section" id="awards">
+      <div class="container">
+        <div style="text-align: center; max-width: 750px; margin-inline: auto;">
+          <span class="section-subtitle">CELEBRATING 25 YEARS OF EXCELLENCE</span>
+          <h2 class="section-title">Awards & <span class="gold-gradient-text">Recognitions</span></h2>
+          <p style="color: var(--text-muted); font-size: 1rem;">
+            Honored by state leaders, international culinary academies, and millions of passionate Hyderabadi food lovers.
+          </p>
+        </div>
+
+        <div class="awards-grid">
+          <div class="award-card tilt-card">
+            <div class="award-icon-badge">🏆</div>
+            <h3 class="award-title">Swiggy Best in Biryani</h3>
+            <div class="award-presenter">Presented by Sriharsha Majety (CEO, Swiggy)</div>
+            <p class="award-desc">Recognized as Hyderabad's most ordered and highly-rated authentic Zafrani Dum Biryani brand across millions of deliveries.</p>
+          </div>
+
+          <div class="award-card tilt-card">
+            <div class="award-icon-badge">🎖️</div>
+            <h3 class="award-title">Times Food & Nightlife Award</h3>
+            <div class="award-presenter">Times of India Culinary Panel</div>
+            <p class="award-desc">Crowned the undisputed Best Hyderabadi Haleem in India, celebrated for preserving traditional wood bhatti craftsmanship.</p>
+          </div>
+
+          <div class="award-card tilt-card">
+            <div class="award-icon-badge">📜</div>
+            <h3 class="award-title">Government of India GI Tag</h3>
+            <div class="award-presenter">Geographical Indications Registry (GI No. 193)</div>
+            <p class="award-desc">Pista House spearheaded the historic campaign that earned Hyderabadi Haleem its prestigious official GI certification.</p>
+          </div>
+
+          <div class="award-card tilt-card">
+            <div class="award-icon-badge">👑</div>
+            <h3 class="award-title">International Quality Crown</h3>
+            <div class="award-presenter">BID Century International Quality Era (London)</div>
+            <p class="award-desc">Awarded gold category for uncompromising product hygiene, export-grade packaging, and global brand innovation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CUSTOMER TESTIMONIALS & REVIEWS (ORIGINAL SITE FEATURE - 4.9★)
+         ========================================================================== -->
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="testimonials-header-row">
+          <div>
+            <span class="section-subtitle">VOICES OF ROYAL PATRONS</span>
+            <h2 class="section-title">Verified <span class="gold-gradient-text">Customer Reviews</span></h2>
+            <p style="color: var(--text-muted); margin-top: 0.3rem;">
+              Over 35,000+ five-star reviews from foodies across Hyderabad, the USA, the Gulf, and Europe.
+            </p>
+          </div>
+
+          <div class="rating-summary-pill">
+            <div class="rating-stars">★★★★★</div>
+            <div class="rating-score">4.9 / 5.0 Rating</div>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card tilt-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-quote">"The retort travel pack biryani survived my 22-hour flight from Hyderabad to Dallas. Opened it up, microwaved for 3 minutes, and the whole kitchen smelled of genuine Charminar zafran!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">FK</div>
+              <div>
+                <div class="author-name">Dr. Farhan Khan</div>
+                <div class="author-location">Dallas, Texas • Verified Traveler</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card tilt-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-quote">"Nothing in Dubai matches the pure desi ghee taste of Pista House GI Haleem. Ordered on WhatsApp and received it warm and perfectly sealed in Downtown Dubai. Truly royal service."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AA</div>
+              <div>
+                <div class="author-name">Aisha Al-Maktoum</div>
+                <div class="author-location">Dubai, UAE • Verified Patron</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card tilt-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-quote">"The Zafrani Dum Ke Roat is an absolute masterpiece. Crunchy golden crust outside, soft rich almond center inside. Our family orders 5kg every Muharram without fail."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MZ</div>
+              <div>
+                <div class="author-name">Mohammed Zubair</div>
+                <div class="author-location">London, UK • Verified Customer</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card tilt-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-quote">"I grew up having Osmania biscuits at Charminar. Living in Bangalore now, ordering these online brings back childhood memories. Crisp, buttery, and unmatched with morning chai!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">PR</div>
+              <div>
+                <div class="author-name">Priya Ramachandran</div>
+                <div class="author-location">Bangalore, India • Verified Buyer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FRANCHISE OPPORTUNITY BANNER (ORIGINAL SITE FEATURE)
+         ========================================================================== -->
+    <section class="franchise-section" id="franchise">
+      <div class="container">
+        <div class="franchise-banner-box">
+          <div>
+            <span style="display: inline-block; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.8rem;">✦ GLOBAL EXPANSION</span>
+            <h2 class="franchise-title">Join Our Franchise Family & Start Your Journey Today!</h2>
+            <p class="franchise-desc">
+              Partner with Hyderabad's most iconic culinary brand. With 85+ outlets worldwide, proven SOPs, automated master-kitchen logistics, and exceptional ROI across India, GCC, North America, and Europe.
+            </p>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--gold-light); font-weight: 800;">✓</span> 25-Year Brand Equity
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--gold-light); font-weight: 800;">✓</span> Complete Kitchen Training
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem;">
+                <span style="color: var(--gold-light); font-weight: 800;">✓</span> Global Air Supply Chain
+              </div>
+            </div>
+          </div>
+
+          <div class="franchise-cta-wrap">
+            <button class="btn-franchise-apply" id="openFranchiseBtn">
+              Apply for Franchise →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FREQUENTLY ASKED QUESTIONS (ORIGINAL SITE FEATURE)
+         ========================================================================== -->
+    <section class="faq-section" id="faqs">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin-inline: auto;">
+          <span class="section-subtitle">CLARITY & TRANSPARENCY</span>
+          <h2 class="section-title">Frequently Asked <span class="gold-gradient-text">Questions</span></h2>
+          <p style="color: var(--text-muted); font-size: 1rem;">
+            Everything you need to know about our recipes, travel packs, shelf life, and international express deliveries.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item active">
+            <div class="faq-question">
+              <span>How do Pista House travel packs stay fresh for 45 days without preservatives?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              We employ advanced NASA-grade retort thermal processing. The prepared Biryani or Haleem is immediately vacuum-sealed into multi-layer foil pouches with high oxygen barriers, then sterilized under controlled pressure steam. This eliminates all bacteria naturally, allowing room-temperature shelf stability for 45 days with zero synthetic preservatives.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Is Pista House Haleem available year-round or only during Ramadan?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              While Haleem is the king of Ramadan, Pista House prepares our authentic GI-Tagged Haleem 365 days a year for our international travel pack export orders and flagship Charminar restaurant due to continuous global customer demand.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How do you ship internationally to USA, UAE, UK, and Canada?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              We operate via temperature-controlled air freight partnerships with Emirates SkyCargo, British Airways World Cargo, and DHL Express. Consignments are packed with thermal insulation and priority customs clearance, arriving at destination doorsteps within 36 to 48 hours.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Are all Pista House meats and ingredients 100% Halal certified?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes, 100%. All mutton, chicken, and poultry utilized across all Pista House kitchens are certified Halal, procured from government-approved slaughterhouses complying with strict Islamic culinary laws and FSSAI standards.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is the best way to reheat the Heat & Eat Biryani travel pack?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Option 1 (Microwave): Snip open the pouch, empty the Biryani into a microwave-safe dish, cover loosely, and heat on high for 3 minutes.
+              Option 2 (Boiling Water): Submerge the sealed pouch into boiling water for 5 to 7 minutes. Snip open and serve steaming hot!
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I place bulk orders for weddings, corporate gifting, or Eid celebrations?</span>
+              <span class="faq-toggle-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! We provide customized gift hamper boxes, engraved royal tins, and bulk catering orders worldwide. Simply click our "Instant WhatsApp Order" button or email orders@pistahouse.in to connect directly with our corporate concierge.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="royal-footer">
+      <div class="container">
+        <div class="footer-grid" style="grid-template-columns: 1.3fr 1fr 1fr 1.2fr;">
+          <div>
+            <div class="brand-title" style="font-size: 1.4rem; margin-bottom: 0.5rem;">PISTA HOUSE</div>
+            <div class="brand-tagline" style="margin-bottom: 1rem;">25 YEARS OF NIZAMI HERITAGE</div>
+            <p style="font-size: 0.85rem; color: #b7cfc3; line-height: 1.6; max-width: 320px;">
+              Founded in 1997 near the historic Charminar, Hyderabad by Mohd. Abdul Majeed. World-famous for GI-Tagged Haleem, Zafrani Biryani, and traditional confectionery.
+            </p>
+
+            <div class="footer-social-row">
+              <a href="https://www.facebook.com/pistahousehyd" target="_blank" rel="noopener" class="social-link-btn" title="Facebook">f</a>
+              <a href="https://www.instagram.com/pistahousehyd/" target="_blank" rel="noopener" class="social-link-btn" title="Instagram">ig</a>
+              <a href="https://twitter.com/pistahousehyd" target="_blank" rel="noopener" class="social-link-btn" title="Twitter / X">𝕏</a>
+              <a href="https://www.youtube.com/@pistahousehyd" target="_blank" rel="noopener" class="social-link-btn" title="YouTube">▶</a>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Categories</div>
+            <ul class="footer-links">
+              <li><a href="#biryani" class="footer-link">Zafrani Dum Biryani</a></li>
+              <li><a href="#haleem" class="footer-link">GI-Tagged Haleem</a></li>
+              <li><a href="#featured-roat" class="footer-link">Dum Ke Roat (1kg & 500g)</a></li>
+              <li><a href="#chai-osmania" class="footer-link">Osmania & Cookies</a></li>
+              <li><a href="#menu" class="footer-link">Pista Sticks & Savories</a></li>
+              <li><a href="#menu" class="footer-link">Gift Hampers & Sweets</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Policies & Trust</div>
+            <ul class="footer-links">
+              <li><a href="javascript:void(0)" class="footer-link" id="openShippingPolicyBtn">Shipping & Air Cargo Policy</a></li>
+              <li><a href="javascript:void(0)" class="footer-link" id="openRefundPolicyBtn">Refund & Replacement Policy</a></li>
+              <li><a href="#faqs" class="footer-link">100% Halal Certification</a></li>
+              <li><a href="#faqs" class="footer-link">45-Day Retort Guarantee</a></li>
+              <li><a href="#franchise" class="footer-link">Franchise Inquiry</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Get the Best Deals!</div>
+            <p style="font-size: 0.82rem; color: #b7cfc3; line-height: 1.5; margin-bottom: 0.8rem;">
+              Subscribe for exclusive Ramadan offers, free shipping coupons, and seasonal Dum Ke Roat announcements.
+            </p>
+            <form class="newsletter-form" id="newsletterForm" onsubmit="event.preventDefault(); window.handleNewsletter();">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address..." required />
+              <button type="submit" class="newsletter-btn">Join</button>
+            </form>
+            <div id="newsletterSuccess" style="display: none; color: #2ecc71; font-size: 0.8rem; margin-top: 0.5rem; font-weight: 700;">
+              ✓ You are subscribed to Royal Dastarkhwan perks!
+            </div>
+
+            <div style="margin-top: 1.5rem; display: flex; gap: 0.6rem; align-items: center;">
+              <button class="btn-royal-outline" style="padding: 0.45rem 0.9rem; font-size: 0.76rem;" id="openPitchBtn">
+                <span>✦ View Pitch Deck</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Pista House • All Rights Reserved. Conceptual Luxury Flagship Experience.</div>
+          <div>Charminar • Banjara Hills • Tolichowki • Shamshabad • Dallas (USA) • Dubai (UAE)</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+       SLIDE-OUT ROYAL DASTARKHWAN (CART DRAWER)
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-drawer-header">
+      <h3 class="cart-drawer-title font-royal">Royal Dastarkhwan <span class="gold-gradient-text">Tray</span></h3>
+      <button class="btn-close-drawer" id="closeCartBtn">✕</button>
+    </div>
+
+    <div class="cart-drawer-body">
+      <!-- Items dynamically injected -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.78rem; color: #2ecc71;">
+        <span>✓</span> 45-Day Vacuum Sealed Freshness Guarantee Included
+      </div>
+
+      <div class="cart-total-row">
+        <span>Estimated Total:</span>
+        <span class="cart-total-price">₹0</span>
+      </div>
+
+      <a href="#" target="_blank" class="whatsapp-order-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.699c.971.53 1.771.82 2.796.82 3.182 0 5.768-2.587 5.769-5.766.001-3.181-2.584-5.766-5.769-5.766zm9.969 5.766c0 5.514-4.486 10-10 10-1.745 0-3.385-.45-4.819-1.238l-7.181 1.882 1.916-6.997c-.859-1.488-1.352-3.212-1.352-5.047 0-5.514 4.486-10 10-10s10 4.486 10 10z"/>
+        </svg>
+        <span>Instant WhatsApp Order</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       EXECUTIVE PITCH PRESENTATION MODAL (FOR SHARING WITH FOUNDERS)
+       ========================================================================== -->
+  <div class="pitch-modal-overlay" id="pitchModalOverlay">
+    <div class="pitch-modal">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+        <div>
+          <span class="pitch-badge">EXECUTIVE PITCH DECK</span>
+          <h2 class="font-royal" style="font-size: 2rem; margin-bottom: 0.5rem;">Why Pista House Needs This <span class="gold-gradient-text">Redesign</span></h2>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">
+            A strategic proposal prepared for Mohd. Abdul Majeed and Pista House Executive Leadership.
+          </p>
+        </div>
+        <button class="btn-close-drawer" id="closePitchBtn">✕</button>
+      </div>
+
+      <div class="pitch-grid">
+        <div class="pitch-card">
+          <div class="pitch-card-metric">+42%</div>
+          <div class="pitch-card-label">Higher International AOV</div>
+          <div class="pitch-card-desc">Travel packs & multi-currency options remove NRI checkout hesitation in USA, UAE & UK.</div>
+        </div>
+
+        <div class="pitch-card">
+          <div class="pitch-card-metric">3.2x</div>
+          <div class="pitch-card-label">Longer Session Duration</div>
+          <div class="pitch-card-desc">Sensory 3D motion and ingredient deconstruction turn passive browsing into craving.</div>
+        </div>
+
+        <div class="pitch-card">
+          <div class="pitch-card-metric">60 FPS</div>
+          <div class="pitch-card-label">Awwwards-Tier Polish</div>
+          <div class="pitch-card-desc">Elevates Pista House from an old local eatery to a global Michelin-tier luxury culinary house.</div>
+        </div>
+
+        <div class="pitch-card">
+          <div class="pitch-card-metric">1-Tap</div>
+          <div class="pitch-card-label">WhatsApp Concierge</div>
+          <div class="pitch-card-desc">Captures high-volume corporate and bulk Eid/Ramadan orders directly on phone.</div>
+        </div>
+      </div>
+
+      <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-gold); border-radius: 16px; padding: 1.4rem; margin-top: 1.5rem;">
+        <h4 style="color: var(--gold-light); margin-bottom: 0.5rem;">Summary of Upgrades Over Current pistahouse.in:</h4>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.88rem; color: var(--text-secondary);">
+          <li>✓ Replaced generic white Shopify box template with authentic Nizami emerald and gold heritage styling.</li>
+          <li>✓ High-resolution appetizing culinary photography replacing low-res raster banners with unreadable text.</li>
+          <li>✓ NASA-grade 45-day retort travel pack 3D visualizer showcasing the global shipping breakthrough.</li>
+          <li>✓ Live currency conversion (INR, USD, AED, SAR, GBP) for diaspora and NRI foodies.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FRANCHISE INQUIRY APPLICATION MODAL
+       ========================================================================== -->
+  <div class="franchise-modal-overlay" id="franchiseModalOverlay">
+    <div class="franchise-modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+        <div>
+          <span style="font-size: 0.75rem; font-weight: 800; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pista-royal);">PISTA HOUSE GLOBAL PARTNERSHIP</span>
+          <h3 class="font-royal" style="font-size: 1.6rem; color: var(--text-primary); margin-top: 0.2rem;">Apply for <span class="gold-gradient-text">Franchise</span></h3>
+        </div>
+        <button class="btn-close-drawer" id="closeFranchiseBtn">✕</button>
+      </div>
+      <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+        Join our expanding global family across India, North America, the Gulf, and Europe. Fill in your details below for our executive team review.
+      </p>
+
+      <form id="franchiseForm" onsubmit="event.preventDefault(); window.handleFranchiseSubmit();">
+        <div class="form-grid">
+          <div>
+            <label class="form-label">Full Name</label>
+            <input type="text" class="form-control" placeholder="e.g. Mohd. Farooq" required />
+          </div>
+          <div>
+            <label class="form-label">Phone / WhatsApp</label>
+            <input type="tel" class="form-control" placeholder="+91 98765 43210" required />
+          </div>
+          <div>
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" placeholder="farooq@example.com" required />
+          </div>
+          <div>
+            <label class="form-label">Preferred City / Country</label>
+            <input type="text" class="form-control" placeholder="e.g. London, Dubai, Dallas, Pune" required />
+          </div>
+          <div class="form-field-full">
+            <label class="form-label">Investment Capability (INR / USD)</label>
+            <select class="form-control">
+              <option value="50L-1Cr">₹50 Lakhs – ₹1 Crore ($60k – $120k USD)</option>
+              <option value="1Cr-2.5Cr">₹1 Crore – ₹2.5 Crores ($120k – $300k USD)</option>
+              <option value="2.5Cr+">₹2.5 Crores+ ($300k+ USD) • Master Franchise</option>
+            </select>
+          </div>
+          <div class="form-field-full">
+            <label class="form-label">Prior Hospitality or Business Experience</label>
+            <textarea class="form-control" rows="3" placeholder="Tell us briefly about your current businesses or culinary experience..."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-form-submit">Submit Franchise Application</button>
+      </form>
+      <div id="franchiseSuccessMsg" style="display: none; text-align: center; padding: 2rem 1rem; color: var(--pista-royal);">
+        <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🎉</div>
+        <h4 style="font-size: 1.2rem; font-weight: 800;">Application Received with Honor!</h4>
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 0.4rem;">Our executive franchise desk will contact you via WhatsApp & Phone within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SHIPPING & POLICY MODAL
+       ========================================================================== -->
+  <div class="policy-modal-overlay" id="shippingPolicyOverlay">
+    <div class="policy-modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+        <h3 class="font-royal" style="font-size: 1.4rem; color: var(--text-primary);">Shipping & Air Cargo <span class="gold-gradient-text">Policy</span></h3>
+        <button class="btn-close-drawer" id="closeShippingPolicyBtn">✕</button>
+      </div>
+      <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; display: flex; flex-direction: column; gap: 1rem;">
+        <p><strong>1. Hyderabad Same-Day Express:</strong> Orders placed before 4:00 PM IST are dispatched directly from the Charminar or Banjara Hills master kitchens and delivered within 3-4 hours.</p>
+        <p><strong>2. Pan-India Priority Air Express:</strong> Orders across major metro cities (Mumbai, Delhi, Bengaluru, Chennai, Kolkata) are dispatched via Bluedart Air Cargo with guaranteed 24-48 hour delivery in thermal boxes.</p>
+        <p><strong>3. International Global Courier:</strong> Shipments to USA, UAE, UK, and Canada are cleared through Rajiv Gandhi International Airport temperature-monitored international cargo terminals and delivered in 36 to 48 hours.</p>
+        <p><strong>4. Free Shipping:</strong> Enjoy 100% Free Shipping on all Pan-India orders above ₹1,499!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="policy-modal-overlay" id="refundPolicyOverlay">
+    <div class="policy-modal-content">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.2rem;">
+        <h3 class="font-royal" style="font-size: 1.4rem; color: var(--text-primary);">Refund & Replacement <span class="gold-gradient-text">Guarantee</span></h3>
+        <button class="btn-close-drawer" id="closeRefundPolicyBtn">✕</button>
+      </div>
+      <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; display: flex; flex-direction: column; gap: 1rem;">
+        <p><strong>1. Freshness Guarantee:</strong> If any travel pack, Haleem tin, or Dum Ke Roat box arrives compromised, unsealed, or damaged in transit, we guarantee a 100% free immediate priority replacement or complete refund.</p>
+        <p><strong>2. Instant WhatsApp Resolution:</strong> Simply take a quick photo of the package and WhatsApp our concierge at <strong>+91 93965 00786</strong> for resolution within 15 minutes.</p>
+        <p><strong>3. Perishable Quality Control:</strong> Every batch is nitrogen flushed and certified by quality khansamas prior to airport dispatch.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Pitch Badge -->
+  <button class="pitch-badge-toggle" id="openPitchBtnBottom" onclick="document.getElementById('pitchModalOverlay').classList.add('active')">
+    <span>✦</span>
+    <span>Executive Pitch Mode</span>
+  </button>
+
+  <!-- Main JavaScript Module -->
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

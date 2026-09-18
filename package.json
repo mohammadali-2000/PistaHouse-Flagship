@@ -1,0 +1,19 @@
+{
+  "name": "pistahouse-luxury-flagship",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 3000",
+    "build": "vite build",
+    "preview": "vite preview --port 3000"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.4",
+    "gsap": "^3.12.7",
+    "lenis": "^1.1.20"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,1753 @@
+@import './variables.css';
+@import './typography.css';
+@import './components.css';
+
+/* ==========================================================================
+   LIGHT LUXURY ROYAL ARCHITECTURE & SECTIONS
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.site-wrapper {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  background-color: var(--bg-primary);
+}
+
+.container {
+  width: min(92%, var(--container-max));
+  margin-inline: auto;
+}
+
+/* Background Ambient Orbs (Soft Light Royal Glows) */
+.ambient-glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.ambient-orb-1 {
+  top: 5%;
+  left: -8%;
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(212, 160, 62, 0.22) 0%, transparent 70%);
+}
+
+.ambient-orb-2 {
+  top: 35%;
+  right: -10%;
+  width: 650px;
+  height: 650px;
+  background: radial-gradient(circle, rgba(22, 91, 64, 0.12) 0%, transparent 70%);
+}
+
+.ambient-orb-3 {
+  top: 70%;
+  left: 15%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(217, 90, 30, 0.15) 0%, transparent 70%);
+}
+
+/* ==========================================================================
+   1. HERO SECTION ("THE ROYAL DASTARKHWAN") - LIGHT LUXURY
+   ========================================================================== */
+/* ==========================================================================
+   1. CINEMATIC CENTERED HERO STAGE (AWARD-WINNING MOTION)
+   ========================================================================== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: clamp(100px, 12vh, 150px);
+  padding-bottom: clamp(60px, 8vh, 100px);
+  background: radial-gradient(circle at 50% 30%, #ffffff 0%, var(--bg-primary) 70%, var(--bg-secondary) 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Massive Editorial Watermark Typography Behind Product */
+.hero-bg-text {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(5rem, 15vw, 15rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: rgba(184, 134, 40, 0.08);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-center-stage {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(94%, 1280px);
+  margin-inline: auto;
+}
+
+.hero-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.25rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1.5px solid var(--border-gold);
+  color: var(--pista-royal);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(184, 134, 40, 0.1);
+  margin-bottom: 1.2rem;
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--zafran-accent);
+  box-shadow: 0 0 10px var(--zafran-accent);
+  animation: dotPulse 2s infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.hero-cinematic-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 7.5vw, 6.8rem);
+  font-weight: 800;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  max-width: 1100px;
+}
+
+.hero-cinematic-title .title-line-1 {
+  display: block;
+  color: var(--text-primary);
+  font-size: 0.65em;
+  letter-spacing: 0.08em;
+}
+
+.hero-center-desc {
+  font-size: clamp(1.05rem, 1.35vw, 1.25rem);
+  color: var(--text-secondary);
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+/* Center Stage for Floating Cutout Biryani Handi */
+.hero-dish-stage {
+  position: relative;
+  width: min(90vw, 540px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  margin-bottom: 2.5rem;
+}
+
+.dish-glow-aura {
+  position: absolute;
+  inset: -15%;
+  background: radial-gradient(circle, rgba(212, 160, 62, 0.35) 0%, rgba(22, 91, 64, 0.15) 45%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+  animation: auraBreath 5s ease-in-out infinite alternate;
+}
+
+.dish-float-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  will-change: transform;
+}
+
+/* Floating Cutout Handi */
+.hero-dish-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 45px rgba(18, 33, 25, 0.2)) drop-shadow(0 10px 20px rgba(184, 134, 40, 0.25));
+  transform-style: preserve-3d;
+  cursor: grab;
+  position: relative;
+  z-index: 5;
+  will-change: transform;
+}
+
+.hero-dish-img:active {
+  cursor: grabbing;
+}
+
+/* Floating Spices in 3D Space */
+.floating-spice {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
+  width: clamp(70px, 12vw, 120px);
+  height: auto;
+  object-fit: contain;
+}
+
+.spice-star-1 {
+  top: 5%;
+  left: -8%;
+  animation: floatSlow 6s ease-in-out infinite alternate;
+}
+
+.spice-cardamom {
+  bottom: 8%;
+  right: -10%;
+  animation: floatSlow 7s ease-in-out infinite alternate-reverse;
+}
+
+/* Floating Callouts with Lines */
+.dish-callout {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  pointer-events: auto;
+  transition: transform 0.3s var(--ease-out-expo);
+}
+
+.dish-callout:hover {
+  transform: scale(1.05);
+}
+
+.callout-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1.5px solid var(--border-gold-bright);
+  backdrop-filter: var(--glass-blur);
+  padding: 0.75rem 1.25rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(18, 33, 25, 0.08), var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-width: 160px;
+}
+
+.callout-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pista-royal);
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.callout-card strong {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.callout-card span:last-child {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+/* Callout Positions Around Central Dish */
+.callout-left-1 {
+  top: 15%;
+  left: -22%;
+}
+
+.callout-right-1 {
+  top: 15%;
+  right: -22%;
+}
+
+.callout-left-2 {
+  bottom: 12%;
+  left: -24%;
+}
+
+.callout-right-2 {
+  bottom: 12%;
+  right: -24%;
+}
+
+@media (max-width: 992px) {
+  .callout-left-1 { left: -5%; top: 5%; }
+  .callout-right-1 { right: -5%; top: 5%; }
+  .callout-left-2 { left: -5%; bottom: 2%; }
+  .callout-right-2 { right: -5%; bottom: 2%; }
+}
+
+@media (max-width: 640px) {
+  .dish-callout {
+    display: none; /* Hide complex callouts on small mobile screens to keep center dish prominent */
+  }
+}
+
+.hero-action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+
+.hero-stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  margin-top: 3.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-gold);
+  width: 100%;
+  max-width: 900px;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--pista-royal);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-top: 0.45rem;
+}
+
+@keyframes floatSlow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  100% { transform: translateY(-12px) rotate(1.5deg); }
+}
+
+/* ==========================================================================
+   2. ROYAL INFINITE TICKER / MARQUEE - LIGHT
+   ========================================================================== */
+.royal-marquee-wrap {
+  position: relative;
+  background: #ffffff;
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+  padding: 1.1rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(18, 33, 25, 0.03);
+}
+
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: marqueeScroll 26s linear infinite;
+}
+
+.marquee-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--pista-royal);
+  text-transform: uppercase;
+}
+
+.marquee-star {
+  color: var(--gold-primary);
+  font-size: 0.95rem;
+}
+
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ==========================================================================
+   3. CULINARY DECONSTRUCTION (PINNED SCROLL) - LIGHT
+   ========================================================================== */
+.pinned-deconstruction-section {
+  position: relative;
+  padding: var(--section-pad) 0;
+  background: var(--bg-secondary);
+}
+
+.deconstruct-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.deconstruct-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.layer-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-card);
+  border-radius: 20px;
+  padding: 1.6rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.4rem;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.layer-card.active {
+  border-color: var(--gold-primary);
+  background: #ffffff;
+  box-shadow: 0 14px 40px rgba(184, 134, 40, 0.16);
+  transform: translateX(12px);
+}
+
+.layer-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.layer-card.active .layer-number {
+  opacity: 1;
+  color: var(--pista-royal);
+}
+
+.layer-info h4 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.layer-info p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.deconstruct-visual {
+  position: sticky;
+  top: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deconstruct-visual-img {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1.5px solid var(--border-gold-bright);
+  box-shadow: 0 20px 50px rgba(18, 33, 25, 0.12), var(--shadow-gold);
+}
+
+/* ==========================================================================
+   4. THE GI-TAGGED HALEEM CHAMBER - LIGHT
+   ========================================================================== */
+.haleem-chamber-section {
+  padding: var(--section-pad) 0;
+  position: relative;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.haleem-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.haleem-visual-box {
+  position: relative;
+}
+
+.haleem-main-img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1.5px solid var(--border-gold-bright);
+  box-shadow: 0 25px 60px rgba(18, 33, 25, 0.14), var(--shadow-gold);
+}
+
+.haleem-specs-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+
+.haleem-spec-item {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.1rem;
+}
+
+.haleem-spec-title {
+  font-size: 0.8rem;
+  color: var(--pista-royal);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.haleem-spec-desc {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+/* ==========================================================================
+   5. "HEAT & EAT" 3D TRAVEL PACK BOX VISUALIZER - LIGHT
+   ========================================================================== */
+.travel-pack-section {
+  padding: var(--section-pad) 0;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.travel-pack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.travel-3d-box-wrap {
+  perspective: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.travel-box-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 1;
+  border-radius: 28px;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
+  cursor: grab;
+}
+
+.travel-box-card:active {
+  cursor: grabbing;
+}
+
+.travel-box-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1.5px solid var(--border-gold-bright);
+  box-shadow: 0 25px 60px rgba(18, 33, 25, 0.14), var(--shadow-pista);
+}
+
+.prep-steps-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 2rem 0;
+}
+
+.prep-step-tab {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  background: #ffffff;
+  border: 1.5px solid var(--border-card);
+  border-radius: 16px;
+  padding: 1.3rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.prep-step-tab:hover, .prep-step-tab.active {
+  background: #ffffff;
+  border-color: var(--pista-royal);
+  transform: translateX(8px);
+  box-shadow: 0 8px 25px rgba(22, 91, 64, 0.12);
+}
+
+.step-icon-bubble {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--pista-light);
+  border: 1.5px solid var(--pista-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--pista-royal);
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   6. IRANI CHAI & OSMANIA BISCUIT EXPERIENCE - LIGHT
+   ========================================================================== */
+.chai-osmania-section {
+  padding: var(--section-pad) 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.chai-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+.chai-interactive-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chai-img {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 28px;
+  border: 1.5px solid var(--border-gold-bright);
+  box-shadow: 0 25px 60px rgba(18, 33, 25, 0.12), var(--shadow-gold);
+}
+
+.dunk-prompt-pill {
+  position: absolute;
+  bottom: 6%;
+  background: #ffffff;
+  border: 1.5px solid var(--gold-primary);
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--pista-royal);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 10px 30px rgba(18, 33, 25, 0.12);
+}
+
+/* ==========================================================================
+   7. THE ROYAL MENU CATALOG & FILTERABLE GRID - LIGHT
+   ========================================================================== */
+.menu-catalog-section {
+  padding: var(--section-pad) 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.menu-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin: 2.5rem 0 3.5rem;
+}
+
+.filter-tab {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  padding: 0.65rem 1.45rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-tab:hover {
+  color: var(--pista-royal);
+  border-color: var(--pista-royal);
+}
+
+.filter-tab.active {
+  background: var(--pista-royal);
+  color: #ffffff;
+  border-color: var(--pista-royal);
+  box-shadow: var(--shadow-pista);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 2rem;
+}
+
+.product-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-card);
+  border-radius: 22px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s var(--ease-out-expo), border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-gold-bright);
+  box-shadow: 0 20px 45px rgba(18, 33, 25, 0.1), var(--shadow-gold);
+}
+
+.product-img-wrap {
+  width: 100%;
+  aspect-ratio: 1.1;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.2rem;
+  background: var(--bg-primary);
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08);
+}
+
+.product-badge-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+
+.product-category {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pista-royal);
+  font-weight: 800;
+}
+
+.product-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.3rem 0 0.8rem;
+  line-height: 1.35;
+}
+
+.product-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.product-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--gold-deep);
+}
+
+.btn-add-tray {
+  background: var(--pista-light);
+  border: 1px solid var(--pista-border);
+  color: var(--pista-royal);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.6rem 1.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-add-tray:hover {
+  background: var(--pista-royal);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(22, 91, 64, 0.3);
+}
+
+/* ==========================================================================
+   8. GLOBAL DELIVERY & OUTLETS MAP - LIGHT
+   ========================================================================== */
+.global-section {
+  padding: var(--section-pad) 0;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.transit-calculator-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-gold-bright);
+  border-radius: 28px;
+  padding: clamp(1.8rem, 4vw, 3rem);
+  margin-top: 3rem;
+  box-shadow: var(--shadow-md);
+}
+
+.transit-city-pills {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  margin: 1.5rem 0 2rem;
+}
+
+.transit-pill {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-card);
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.transit-pill.active {
+  background: var(--pista-royal);
+  color: #ffffff;
+  border-color: var(--pista-royal);
+  box-shadow: var(--shadow-pista);
+}
+
+.transit-result-box {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-card);
+  border-radius: 18px;
+  padding: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.transit-time-val {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--pista-royal);
+  font-family: 'Playfair Display', serif;
+}
+
+/* ==========================================================================
+   9. FOOTER - REFINED DEEP EMERALD FOR CONTRAST
+   ========================================================================== */
+.royal-footer {
+  background: #0f3627;
+  color: var(--text-cream);
+  border-top: 2px solid var(--gold-light);
+  padding: clamp(60px, 8vw, 100px) 0 30px;
+  position: relative;
+}
+
+.royal-footer .brand-title {
+  color: var(--gold-light);
+}
+
+.royal-footer .footer-col-title {
+  color: var(--gold-light);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 4rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-link {
+  color: #d1e2d9;
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--gold-light);
+}
+
+/* ==========================================================================
+   TOP ANNOUNCEMENT BAR
+   ========================================================================== */
+.announcement-bar {
+  background: var(--pista-royal);
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.announcement-link {
+  color: #ffd875;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   SHOP BY CATEGORY SHOWCASE
+   ========================================================================== */
+.category-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1.4rem;
+  margin-top: 3rem;
+}
+
+.category-card {
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-card);
+  border-radius: 20px;
+  padding: 1.6rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease-out-expo), border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--pista-royal);
+  box-shadow: 0 12px 30px rgba(22, 91, 64, 0.12);
+  background: #ffffff;
+}
+
+.category-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon-box {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.category-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.category-count {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ==========================================================================
+   THE 4 CORE TRUST PILLARS
+   ========================================================================== */
+.trust-pillars-section {
+  padding: 3.5rem 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.trust-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.trust-pillar-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.1rem;
+}
+
+.trust-icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #ffffff;
+  border: 1.5px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.trust-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.trust-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   AWARDS & RECOGNITIONS SHOWCASE
+   ========================================================================== */
+.awards-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+  position: relative;
+  text-align: center;
+}
+
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 3rem;
+}
+
+.award-card {
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-card);
+  border-radius: 20px;
+  padding: 1.8rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.award-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-gold);
+}
+
+.award-icon-badge {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.award-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.award-presenter {
+  font-size: 0.82rem;
+  color: var(--pista-royal);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.award-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* ==========================================================================
+   CUSTOMER TESTIMONIALS & REVIEWS (4.9 / 5 STARS)
+   ========================================================================== */
+.testimonials-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.testimonials-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.rating-summary-pill {
+  background: #ffffff;
+  border: 1.5px solid var(--border-gold-bright);
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.rating-stars {
+  color: #f1c40f;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+
+.rating-score {
+  font-weight: 800;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.8rem;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  border: 1.5px solid var(--border-card);
+  border-radius: 20px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease, border-color 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--pista-royal);
+  box-shadow: 0 15px 35px rgba(18, 33, 25, 0.08);
+}
+
+.testimonial-quote {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 1rem 0 1.4rem;
+  font-style: italic;
+}
+
+.testimonial-author {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.author-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--pista-light);
+  border: 1px solid var(--pista-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: var(--pista-royal);
+  font-size: 1rem;
+}
+
+.author-name {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.author-location {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   FRANCHISE OPPORTUNITY BANNER & MODAL
+   ========================================================================== */
+.franchise-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.franchise-banner-box {
+  background: linear-gradient(135deg, #165b40 0%, #0c3625 100%);
+  border-radius: 32px;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 3rem;
+  box-shadow: 0 25px 60px rgba(18, 33, 25, 0.2);
+  border: 2px solid var(--gold-light);
+}
+
+.franchise-title {
+  color: #ffffff;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.15;
+}
+
+.franchise-desc {
+  color: #d8ede3;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 1.8rem;
+}
+
+.franchise-cta-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-franchise-apply {
+  background: var(--gold-foil);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 1.1rem 2.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--gold-light);
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.btn-franchise-apply:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(184, 134, 40, 0.5);
+}
+
+/* ==========================================================================
+   FAQS ACCORDION SECTION
+   ========================================================================== */
+.faq-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: var(--bg-secondary);
+}
+
+.faq-list {
+  max-width: 860px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1.5px solid var(--border-card);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.faq-item.active {
+  border-color: var(--pista-royal);
+  box-shadow: 0 8px 25px rgba(22, 91, 64, 0.08);
+}
+
+.faq-question {
+  padding: 1.3rem 1.6rem;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-toggle-icon {
+  font-size: 1.3rem;
+  color: var(--pista-royal);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 1.6rem 1.4rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ==========================================================================
+   FEATURED DUM KE ROAT & COOKIE SPOTLIGHT (ORIGINAL SITE FEATURE)
+   ========================================================================== */
+.featured-showcase-section {
+  padding: clamp(60px, 8vw, 100px) 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.featured-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featured-product-card {
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-card);
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.featured-product-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--pista-royal);
+  box-shadow: 0 20px 40px rgba(18, 33, 25, 0.1);
+}
+
+.featured-img-wrap {
+  width: 100%;
+  height: 240px;
+  background: #f4ede2;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.featured-product-card:hover .featured-img {
+  transform: scale(1.08);
+}
+
+.featured-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.featured-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.6rem;
+}
+
+.featured-weight {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--pista-royal);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.featured-rating {
+  font-size: 0.82rem;
+  color: #f39c12;
+  font-weight: 700;
+}
+
+.featured-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.featured-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.featured-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-gold);
+}
+
+.featured-price {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  font-family: 'Playfair Display', serif;
+}
+
+/* ==========================================================================
+   FOOTER NEWSLETTER & SOCIAL LINKS
+   ========================================================================== */
+.footer-newsletter-wrap {
+  margin-top: 1rem;
+}
+
+.newsletter-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.newsletter-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(247, 208, 112, 0.3);
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+  outline: none;
+  flex: 1;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.newsletter-input:focus {
+  border-color: var(--gold-light);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-input::placeholder {
+  color: #a4c4b5;
+}
+
+.newsletter-btn {
+  background: var(--gold-foil);
+  color: #122119;
+  font-weight: 800;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(247, 208, 112, 0.4);
+}
+
+.footer-social-row {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.social-link-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(247, 208, 112, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-light);
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+
+.social-link-btn:hover {
+  transform: translateY(-3px);
+  background: var(--gold-light);
+  color: #122119;
+}
+
+/* ==========================================================================
+   FRANCHISE APPLICATION & POLICY MODALS
+   ========================================================================== */
+.franchise-modal-overlay,
+.policy-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(18, 33, 25, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  padding: 1.5rem;
+}
+
+.franchise-modal-overlay.active,
+.policy-modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.franchise-modal-content,
+.policy-modal-content {
+  background: #ffffff;
+  border: 2px solid var(--gold-light);
+  border-radius: 28px;
+  width: 100%;
+  max-width: 620px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: clamp(2rem, 4vw, 2.8rem);
+  position: relative;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+  transform: scale(0.92);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.franchise-modal-overlay.active .franchise-modal-content,
+.policy-modal-overlay.active .policy-modal-content {
+  transform: scale(1);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  background: var(--bg-primary);
+  border: 1.5px solid var(--border-card);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+  border-color: var(--pista-royal);
+  box-shadow: 0 0 0 3px rgba(22, 91, 64, 0.1);
+}
+
+.btn-form-submit {
+  width: 100%;
+  background: var(--pista-royal);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--gold-light);
+  cursor: pointer;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btn-form-submit:hover {
+  background: #0c3625;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVE QUERIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .hero-grid,
+  .deconstruct-grid,
+  .haleem-grid,
+  .travel-pack-grid,
+  .chai-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .deconstruct-visual {
+    position: static;
+  }
+  
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-stats-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  
+  .haleem-specs-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

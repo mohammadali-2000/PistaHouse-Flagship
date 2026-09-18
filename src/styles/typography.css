@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-royal {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+.font-regal-accent {
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 0.06em;
+}
+
+/* Headings Scales */
+.hero-title {
+  font-size: clamp(2.8rem, 6.8vw, 5.8rem);
+  font-weight: 800;
+  line-height: 1.04;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+.section-title {
+  font-size: clamp(2.1rem, 4.2vw, 3.6rem);
+  font-weight: 700;
+  margin-bottom: 1.1rem;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--pista-royal);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+  background: var(--pista-light);
+  padding: 0.35rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--pista-border);
+}
+
+.section-subtitle::before,
+.section-subtitle::after {
+  content: '✦';
+  font-size: 0.65rem;
+  color: var(--gold-primary);
+}
+
+/* Crisp Gold Text Gradient (tuned for high contrast on light backgrounds) */
+.gold-gradient-text {
+  background: var(--gold-foil-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.zafran-gradient-text {
+  background: linear-gradient(135deg, #c44714 0%, #e86326 50%, #8c2a05 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.pista-gradient-text {
+  background: linear-gradient(135deg, #0f4530 0%, #1a6f4e 50%, #08291d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 800;
+}
+
+/* Kinetic split-line text styles for GSAP */
+.split-line {
+  overflow: hidden;
+  display: block;
+}
+
+.split-line span {
+  display: inline-block;
+  will-change: transform, opacity;
+}
